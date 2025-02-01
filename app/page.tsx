@@ -4,11 +4,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="w-screen h-screen relative">
-      <div className="" style={{backgroundColor: "#1C1B22"}}>
-        <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-10 max-w-750px">
-          <h1 className="text-50px text-white font-semibold">
+      <div className="flex items-center w-full h-full bg-cover bg-center" style={{backgroundColor: "#1C1B22"}}>
+        <div className="pl-20 md:pl-40 pb-56 md:pb-20 flex flex-col gap-5 z-[10] max-w-[750px]">
+          <h1 className="text-[50px] text-white font-semibold">
             Make Anything Possible with
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-600 to-green-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500">
+              {" "}
               Web Development
             </span>
           </h1>
@@ -18,8 +19,9 @@ export default function Home() {
           <div className="flex-col md:flex-row hidden md:flex gap-5">
             <Link
               href="/my-skills"
-              className="rounded-[20px] group relative bg-blue-500 hover:bg-blue-400 px-5 py-3 text-white max-w-200px"
+              className="rounded-[20px] group relative bg-blue-700  px-5 py-3 text-lg text-white max-w-[200px]"
             >
+              <div className="absolute rounded-[20px]  bg-white inset-0 opacity-0 group-hover:opacity-20" />
               My Skills
             </Link>
             <Link
@@ -59,6 +61,10 @@ export default function Home() {
             Contact Me
         </Link>
       </div>
+
+      <footer>
+        
+      </footer>
     </main>
   );
 }

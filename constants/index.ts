@@ -10,8 +10,32 @@ export const Socials = [
         url: "https://github.com/Pixel-Crafter"
     },
     {
-        name: "Instagram",
-        src: "/instagram.svg",
-        url: "https://www.instagram.com/harshal_2209",
+        name: "LinkedIn",
+        src: "/linkedin.png",
+        url: "inkedin.com/in/harshal-deshmukh-44b3902a5",
+    },
+];
+
+export const Projects = [
+    {
+        name: "Project 1",
+        text: "",
+        src: "/", alt: "Project Thumbnail"
+
+    },
+    {
+        name: "",
+        text: "",
+        src: "/", alt: "Project Thumbnail"
+    },
+    {
+        name: "",
+        text: "",
+        src: "/", alt: "Project Thumbnail"
+    },
+    {
+        name: "",
+        text: "",
+        src: "/", alt: "Project Thumbnail"
     },
 ];

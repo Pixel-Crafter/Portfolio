@@ -17,7 +17,8 @@ const Navbar = () => {
             </div>
             <h1 className='text-white text-[25px] font-semibold'>
                 Full Stack
-                <span className='text-transparent bg-clip-text bg-gradient-to-r from-gray-500 to-green-500'>
+                <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500'>
+                    {" "}
                     Dev
                 </span>
             </h1>
@@ -30,14 +31,14 @@ const Navbar = () => {
                         key={social.name}
                         src={social.src}
                         alt={social.name}
-                        width={30}
-                        height={30}
+                        width={40}
+                        height={0}
                     />
                 </a>
             ))}
         </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
