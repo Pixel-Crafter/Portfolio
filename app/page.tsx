@@ -1,3 +1,4 @@
+import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -38,7 +39,10 @@ export default function Home() {
               <div className="absolute rounded-[20px] z-[1] bg-white inset-0 opacity-0 group-hover:opacity-20" />
               Contact Me
             </Link>
-          </div>
+          </div>          
+        </div>
+        <div className="absolute right-40 w-[45%]">
+          <BackgroundAnimation />
         </div>
       </div>
 
@@ -61,7 +65,7 @@ export default function Home() {
             Contact Me
         </Link>
       </div>
-
+      
       <footer>
         
       </footer>

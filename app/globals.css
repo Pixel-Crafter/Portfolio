@@ -42,8 +42,8 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 .login-box {
-  margin-top: 100px;
-  width: 400px;
+  
+  width: 500px;
   padding: 40px;
   /* background: rgba(0, 0, 0, 0.5); */
   box-sizing: border-box;

@@ -19,23 +19,23 @@ export const Socials = [
 export const Projects = [
     {
         name: "Project 1",
-        text: "",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         src: "/", alt: "Project Thumbnail"
 
     },
     {
-        name: "",
-        text: "",
+        name: "Project 2",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         src: "/", alt: "Project Thumbnail"
     },
     {
-        name: "",
-        text: "",
+        name: "Project 3",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         src: "/", alt: "Project Thumbnail"
     },
     {
-        name: "",
-        text: "",
+        name: "Project 4",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
         src: "/", alt: "Project Thumbnail"
     },
 ];
