@@ -1,4 +1,5 @@
 import ContactForm from '@/components/ContactForm'
+import Image from 'next/image';
 import React from 'react'
 
 const page = () => {
@@ -18,7 +19,7 @@ const page = () => {
         </div>
         
         <div className='w-3/4 flex items-center justify-center pt-5 pb-7'>
-          <img
+          <Image
             src='/contactme.png'
             alt='Contact Me'
             className='w-[70%] h-auto'
