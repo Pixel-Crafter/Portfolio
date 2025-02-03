@@ -25,19 +25,17 @@ const Navbar = () => {
         </div>
 
         <div className='flex flex-row gap-5 mb-2'>
-            {Socials.map((social) => {
-                console.log(social.name);
-                return (
-                    <a key={social.name} href={social.url}>
-                        <Image                        
-                            src={social.src}
-                            alt={social.name}
-                            width={40}
-                            height={40}
-                        />
-                    </a>
-                );
-            })}
+            {Socials.map((social) => (
+                <a href={social.url}>
+                    <Image
+                        key={social.name}
+                        src={social.src}
+                        alt={social.name}
+                        width={40}
+                        height={40}
+                    />
+                </a>
+            ))}
         </div>
     </div>
   );
