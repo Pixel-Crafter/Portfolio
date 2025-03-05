@@ -12,7 +12,7 @@ export const Socials = [
     {
         name: "LinkedIn",
         src: "/linkedin.png",
-        url: "inkedin.com/in/harshal-deshmukh-44b3902a5",
+        url: "https://www.linkedin.com/in/harshal-deshmukh-44b3902a5/",
     },
 ];
 
