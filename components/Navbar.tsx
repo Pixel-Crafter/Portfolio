@@ -16,10 +16,10 @@ const Navbar = () => {
                 />
             </div>
             <h1 className='text-white text-[25px] font-semibold'>
-                Full Stack
-                <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-green-500'>
+                Pixel
+                <span className='text-transparent font-b bg-clip-text bg-gradient-to-r from-blue-500 to-green-500'>
                     {" "}
-                    Dev
+                    Crafter
                 </span>
             </h1>
         </div>

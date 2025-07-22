@@ -1,6 +1,7 @@
 "use client"
 
 import BackgroundAnimation from "@/components/BackgroundAnimation";
+import AnimatedProgress from "@/components/AnimatedProgress";
 import Link from "next/link";
 
 export default function Home() {
@@ -42,6 +43,12 @@ export default function Home() {
             </Link>
           </div>          
         </div>
+
+        <div className="w-[40%] mx-auto">      
+          <h1 className="text-white text-[40px] text-center"><b>Under Development</b></h1>
+          <AnimatedProgress />
+        </div>
+        
         <div className="absolute right-40 w-[45%]">
           <BackgroundAnimation />
         </div>
