@@ -89,7 +89,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-screen h-screen relative overflow-hidden">
+    <main className="w-screen h-screen relative overflow-y-auto no-scrollbar">
       <div
         className="flex flex-col md:flex-row items-center justify-center w-full h-full bg-cover bg-center"
         style={{ backgroundColor: "#1C1B22" }}
