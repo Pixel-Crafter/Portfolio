@@ -8,7 +8,7 @@ export default function AnimatedProgress() {
   const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
   const innerWidth = 80; // width of the sliding gradient bar in pixels
   const stepSize = 3; // pixels to move per interval
-  const intervalDelay = 10; // interval delay in milliseconds
+  const intervalDelay = 15; // interval delay in milliseconds
 
   useEffect(() => {
     const interval = setInterval(() => {
