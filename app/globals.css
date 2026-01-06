@@ -21,6 +21,10 @@ body {
   overflow: hidden;
 } */
 
+html {
+  transition: background-color 0.5s, color 0.5s;
+}
+
 body {
   overflow: hidden;
 }

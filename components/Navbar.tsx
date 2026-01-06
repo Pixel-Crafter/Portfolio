@@ -1,8 +1,13 @@
+"use client";
+
 import { Socials } from '@/constants'
 import Image from 'next/image'
 import React from 'react'
+import ThemeToggle from './ThemeToggle';
+import { useTheme } from 'next-themes';
 
 const Navbar = () => {
+    const { theme } = useTheme();
   return (
     <div className='fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-10 md:px-20'>
         <div className='flex flex-row gap-3 items-center'>
@@ -15,7 +20,7 @@ const Navbar = () => {
                     className='w-full h-full object-contain'
                 />
             </div>
-            <h1 className='text-white text-[25px] font-semibold'>
+            <h1 className='text-black dark:text-white text-[25px] font-semibold'>
                 Pixel
                 <span className='text-transparent font-b bg-clip-text bg-gradient-to-r from-blue-500 to-green-500'>
                     {" "}
@@ -24,14 +29,23 @@ const Navbar = () => {
             </h1>
         </div>
 
+        <div className="flex flex-row items-center px-8">
+            <ThemeToggle />
+        </div>
+
         <div className='flex flex-row gap-5 mb-2'>
             {Socials.map((social) => (
-                <a key={social.name} href={social.url}>
+                <a key={social.name} href={social.url} className="transition-transform hover:scale-110">
                     <Image
                         src={social.src}
                         alt={social.name}
                         width={40}
                         height={40}
+                        className={
+                            social.invertOnLight && theme === "light"
+                            ? "invert"
+                            : ""
+                        }
                     />
                 </a>
             ))}

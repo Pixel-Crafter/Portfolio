@@ -1,16 +1,26 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useTheme } from "next-themes";
 
 export default function AnimatedProgress() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false); // wait for client
   const containerRef = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
-  const innerWidth = 80; // width of the sliding gradient bar in pixels
-  const stepSize = 3; // pixels to move per interval
-  const intervalDelay = 15; // interval delay in milliseconds
+  const innerWidth = 80;
+  const stepSize = 3;
+  const intervalDelay = 15;
+
+  // Set mounted to true after client render
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
+    if (!mounted) return; // only run on client
+
     const interval = setInterval(() => {
       setPosition((oldPos) => {
         if (!containerRef.current) return oldPos;
@@ -27,15 +37,21 @@ export default function AnimatedProgress() {
       });
     }, intervalDelay);
 
-    return () => {
-      clearInterval(interval);
-    };
-  }, [direction]);
+    return () => clearInterval(interval);
+  }, [direction, mounted]);
+
+  // Don't render anything until mounted
+  if (!mounted) return null;
+
+  const bgColor = theme === "dark" ? "bg-gray-700" : "bg-gray-300";
+  const gradient = theme === "dark"
+    ? "from-blue-500 to-green-400"
+    : "from-blue-300 to-green-300";
 
   return (
     <div
       ref={containerRef}
-      className="w-full h-6 bg-gray-700 rounded overflow-hidden relative"
+      className={`w-full h-6 ${bgColor} rounded overflow-hidden relative transition-colors duration-300`}
       aria-label="Loading progress"
       role="progressbar"
       aria-valuemin={0}
@@ -43,7 +59,7 @@ export default function AnimatedProgress() {
       aria-valuenow={position}
     >
       <div
-        className="absolute top-0 h-full bg-gradient-to-r from-blue-500 to-green-400 rounded"
+        className={`absolute top-0 h-full bg-gradient-to-r ${gradient} rounded`}
         style={{ width: `${innerWidth}px`, left: `${position}px`, transition: "left 0.01s linear" }}
       />
     </div>
