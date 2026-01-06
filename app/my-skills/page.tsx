@@ -84,41 +84,33 @@ import Image from "next/image"
 import { SkillData } from "@/constants"
 
 export default function Page() {
-  return (
-    <div
-      style={{ backgroundColor: "#1C1B22" }}
-      className="h-screen w-screen flex justify-center pt-24 p-4 overflow-y-auto no-scrollbar"
-    >
-      <div className="max-w-[900px] w-full flex flex-col items-center text-center gap-12">
+    return (
+        <div className="h-screen w-screen flex justify-center pt-24 p-4 overflow-y-auto no-scrollbar text-black dark:text-white bg-white dark:bg-[#1C1B22] transition-colors duration-300">
+            <div className="max-w-[900px] w-full flex flex-col items-center text-center gap-12">
+                <h1 className="font-semibold text-4xl md:text-5xl">
+                    Skills{" "}
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
+                        & Technologies
+                    </span>
+                </h1>
 
-        <h1 className="font-semibold text-white text-4xl md:text-5xl">
-          Skills{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-500">
-            & Technologies
-          </span>
-        </h1>
-
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
-          {SkillData.map((skill, i) => (
-            <div
-              key={i}
-              className="
-                flex flex-col items-center gap-2 
-                p-3 bg-[#26252e] rounded-xl transition 
-                hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20
-              "
-            >
-              <Image
-                src={skill.Image}
-                alt={skill.name}
-                width={skill.width}
-                height={skill.height}
-              />
-              <p className="text-white text-sm">{skill.name}</p>
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                    {SkillData.map((skill, i) => (
+                        <div
+                            key={i}
+                            className="flex flex-col items-center gap-2 p-3 bg-gray-200 dark:bg-[#26252e] rounded-xl transition hover:scale-110 hover:shadow-lg hover:shadow-purple-500/20"
+                        >
+                            <Image
+                                src={skill.Image}
+                                alt={skill.name}
+                                width={skill.width}
+                                height={skill.height}
+                            />
+                            <p className="text-sm">{skill.name}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
         </div>
-      </div>
-    </div>
-  )
+    )
 }

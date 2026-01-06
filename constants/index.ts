@@ -7,7 +7,8 @@ export const Socials = [
     {
         name: "GitHub",
         src: "/github-mark-white.svg",
-        url: "https://github.com/Pixel-Crafter"
+        url: "https://github.com/Pixel-Crafter",
+        invertOnLight: true
     },
     {
         name: "LinkedIn",
@@ -114,4 +115,28 @@ export const SkillData = [
         width: 40,
         height: 40,
     },
+];
+
+export const AboutMeData = [
+    {
+        name: "Discord",
+        Image: "/discord.svg",
+        url: "https://discord.gg/9MXRvC37SP",
+        width: 40,
+        height: 40,
+    },
+    {
+        name: "GitHub",
+        Image: "/github-mark-white.svg",
+        url: "https:/github.com/Pixel-Crafter",
+        width: 40,
+        height: 40,
+    },
+    {
+        name: "LinkedIn",
+        Image: "/linkedin.png",
+        url: "https://www.linkedin.com/in/harshal-deshmukh-44b3902a5/",
+        width: 40,
+        height: 40,
+    }
 ];

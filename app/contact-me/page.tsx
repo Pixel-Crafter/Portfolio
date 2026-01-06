@@ -39,68 +39,33 @@ import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
-  return (
-    <div
-      style={{ backgroundColor: "#1C1B22" }}
-      className="
-        w-screen 
-        h-screen                /* mobile safe */
-        flex 
-        items-center 
-        justify-center 
-        pt-40                   /* mobile padding */
-        md:p-10                 /* desktop padding */
-        overflow-y-auto         /* ALWAYS allow scrolling */
-        no-scrollbar            /* hide scrollbar */
-      "
-    >
-      <div
-        style={{ backgroundImage: "url('/bg-3.jpg')" }}
-        className="
-          w-full 
-          max-w-6xl
-          bg-cover 
-          bg-center
-          rounded-xl 
-          border border-white/20 
-          p-6
-          
-          /* MOBILE: stack */
-          flex
-          flex-col 
-          gap-10
+    return (
+        <div className="w-screen h-screen flex items-center justify-center pt-40 md:p-10 overflow-y-auto no-scrollbar bg-white dark:bg-[#1C1B22] text-black dark:text-white transition-colors duration-300">
+            <div
+                style={{ backgroundImage: "url('/bg-3.jpg')" }}
+                className="w-full max-w-6xl bg-cover bg-center rounded-xl border border-black/20 dark:border-white/20 p-6 flex flex-col gap-10 md:flex-row md:gap-0 transition-colors duration-300"
+            >
+                {/* LEFT: FORM */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center px-2 md:px-8">
+                    <h1 className="text-white text-3xl md:text-4xl font-semibold mb-6 text-center md:text-left">
+                        Contact Me
+                    </h1>
+                    <ContactForm />
+                </div>
 
-          /* DESKTOP: side-by-side */
-          md:flex-row 
-          md:gap-0
-        "
-      >
-        {/* LEFT: FORM */}
-        <div className="w-full md:w-1/2 flex flex-col justify-center px-2 md:px-8">
-          <h1 className="text-white text-3xl md:text-4xl font-semibold mb-6 text-center md:text-left">
-            Contact Me
-          </h1>
-          <ContactForm />
+                {/* RIGHT: IMAGE */}
+                <div className="w-full md:w-1/2 flex items-center justify-center px-4 py-6">
+                    <Image
+                        src="/contactme.png"
+                        alt="Contact Me"
+                        width={500}
+                        height={500}
+                        className="w-[70%] md:w-[80%] max-w-[300px] h-auto"
+                    />
+                </div>
+            </div>
         </div>
-
-        {/* RIGHT: IMAGE */}
-        <div className="w-full md:w-1/2 flex items-center justify-center px-4 py-6">
-          <Image
-            src="/contactme.png"
-            alt="Contact Me"
-            width={500}
-            height={500}
-            className="
-              w-[70%] 
-              md:w-[80%] 
-              max-w-[300px]     /* prevents oversize on mobile */
-              h-auto
-            "
-          />
-        </div>
-      </div>
-    </div>
-  )
+    )
 }
 
 export default page
